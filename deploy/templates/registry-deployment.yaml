@@ -21,4 +21,4 @@ spec:
           {{- toYaml .Values.registry.env | nindent 12 }}
           envFrom:
             - secretRef:
-                name: {{ required "Missing required value: registry.github_secrets_name" .Values.registry.github_secrets_name }}
+                name: {{ required "Missing required value: registry.github_secret_name" .Values.registry.github_secret_name }}
